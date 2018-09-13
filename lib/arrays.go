@@ -55,3 +55,15 @@ func VarTest(nums ...int) {
 	fmt.Println(nums)
 	fmt.Printf("The sum of %d numbers is: %d\n", count, sum)
 }
+
+//Swap is a simple str swap
+func Swap(a, b string) (string, string) {
+	return b, a
+}
+
+// Split is a weird custom split function
+func Split(sum int) (x, y int) {
+	x = sum * 4 / 9
+	y = sum - x
+	return
+}

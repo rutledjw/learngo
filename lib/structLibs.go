@@ -26,10 +26,10 @@ func ClosTest(x, y int) func() int {
 	}
 }
 
-//fact performs factoral computation
-func fact(n int) int {
+//Fact performs factoral computation
+func Fact(n int) int {
 	if n == 0 {
 		return 1
 	}
-	return n * fact(n-1)
+	return n * Fact(n-1)
 }

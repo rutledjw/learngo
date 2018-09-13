@@ -4,7 +4,7 @@ import (
 	arr "../learngo/lib"
 	"fmt"
 	"math"
-	"strings"
+	"math/rand"
 )
 
 func listRuns() {
@@ -21,14 +21,22 @@ func listRuns() {
 	arr.RangeTest(list)
 
 	arr.LoopTest(5)
+
+}
+
+func oddMath() {
 	fmt.Println("My favorite number is: ", rand.Intn(50))
 	fmt.Println("----  space   ----")
 	fmt.Printf("you now have %g problems", math.Sqrt(7))
 	fmt.Println()
-	fmt.Println("Pi: ", math.Pi, "add func: ", add(42, 45))
+	fmt.Println("Pi: ", math.Pi)
 	fmt.Println()
-	a, b := swap("hello", "world")
+	a, b := arr.Swap("hello", "world")
 	fmt.Println(a, b)
 	fmt.Printf("Weird split function: ")
-	fmt.Println(strings.split(17))
+	fmt.Println(arr.Split(17))
 }
+
+/* I don't remember what this stuff does
+
+ */
