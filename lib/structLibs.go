@@ -1,23 +1,53 @@
 package testlibs
 
-type rectangle struct {
+import (
+	"fmt"
+	"math"
+)
+
+type geometry interface {
+	area() float64
+	perim() float64
+}
+
+// Circle is a shape
+type Circle struct {
+	Radius float64
+}
+
+//Rect geometric features
+type Rect struct {
 	name          string
-	height, width int
+	Height, Width float64
 }
 
-func (p *rectangle) area() int {
-	return p.height * p.width
+func (r Rect) area() float64 {
+	return r.Height * r.Width
 }
 
-func (p *rectangle) half() (int, int) {
-	return (p.height / 2), (p.width / 2)
+func (r Rect) perim() float64 {
+	return 2*r.Width + 2*r.Height
+}
+
+func (c Circle) area() float64 {
+	return math.Pi * c.Radius * c.Radius
+}
+func (c Circle) perim() float64 {
+	return 2 * math.Pi * c.Radius
+}
+
+//Measure is exported
+func Measure(g geometry) {
+	fmt.Println("Geometry", g)
+	fmt.Println("Area", g.area())
+	fmt.Println("Perimeter", g.perim())
 }
 
 //ClosTest tests Closure functions, functions that return anonymous functions
-func ClosTest(x, y int) func() int {
+func ClosTest(x, y float64) func() float64 {
 
-	return func() int {
-		oddSum := 0
+	return func() float64 {
+		oddSum := 0.0
 		for x <= y {
 			oddSum += y
 			x++
