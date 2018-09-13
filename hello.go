@@ -7,12 +7,12 @@ import (
 
 func main() {
 
-	fmt.Println("Factoral of 5:", fact(5))
+	fmt.Println("Factoral of 5:", arr.fact(5))
 
 	fmt.Printf("Multiple Return: ")
 	fmt.Println(arr.RetMult(3, 4))
 	arr.VarTest(3, 6, 33, 894)
-	cTest := ClosTest(2, 6)
+	cTest := arr.ClosTest(2, 6)
 	fmt.Println("ClosureTest 2, 6: ", cTest())
 }
 

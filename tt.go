@@ -1,34 +1,34 @@
 package main
 
-type rectangle struct {
-	name          string
-	height, width int
-}
+import (
+	arr "../learngo/lib"
+	"fmt"
+	"math"
+	"strings"
+)
 
-func (p *rectangle) area() int {
-	return p.height * p.width
-}
+func listRuns() {
+	fmt.Println(arr.BuildResponse("Jeff"))
 
-func (p *rectangle) half() (int, int) {
-	return (p.height / 2), (p.width / 2)
-}
+	var i, j int = 1, 2
+	var c, java, python = true, false, "no!"
+	fmt.Println(i, j, c, java, python)
 
-//ClosTest tests Closure functions, functions that return anonymous functions
-func ClosTest(x, y int) func() int {
+	list := []string{"a", "c", "d", "e"}
+	list = list[2:3]
+	fmt.Println("slice size 3")
+	arr.PrintSlice(list)
+	arr.RangeTest(list)
 
-	return func() int {
-		oddSum := 0
-		for x <= y {
-			oddSum += y
-			x++
-		}
-		return oddSum
-	}
-}
-
-func fact(n int) int {
-	if n == 0 {
-		return 1
-	}
-	return n * fact(n-1)
+	arr.LoopTest(5)
+	fmt.Println("My favorite number is: ", rand.Intn(50))
+	fmt.Println("----  space   ----")
+	fmt.Printf("you now have %g problems", math.Sqrt(7))
+	fmt.Println()
+	fmt.Println("Pi: ", math.Pi, "add func: ", add(42, 45))
+	fmt.Println()
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+	fmt.Printf("Weird split function: ")
+	fmt.Println(strings.split(17))
 }
