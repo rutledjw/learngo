@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("ClosureTest 2, 6: ", cTest())
 
 	// Interfaces
-	r := arr.Rect{Width: 3, Height: 6.2}
+	r := arr.Rect{Name: "Rectangle1", Width: 3, Height: 6.2}
 	c := arr.Circle{Radius: 5.5}
 
 	arr.Measure(r)

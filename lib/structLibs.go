@@ -17,10 +17,11 @@ type Circle struct {
 
 //Rect geometric features
 type Rect struct {
-	name          string
+	Name          string
 	Height, Width float64
 }
 
+//Testing functions that "implement" the interface listed above
 func (r Rect) area() float64 {
 	return r.Height * r.Width
 }
