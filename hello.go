@@ -21,4 +21,7 @@ func main() {
 
 	arr.Measure(r)
 	arr.Measure(c)
+
+	//Threads
+	arr.TestThreads()
 }

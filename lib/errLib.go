@@ -1,7 +1,6 @@
 package testlibs
 
 import (
-	"errors"
 	"fmt"
 )
 
