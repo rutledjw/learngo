@@ -1,6 +1,7 @@
 package testlibs
 
 import (
+	"errors"
 	"fmt"
 )
 
@@ -8,6 +9,16 @@ import (
 type ArgError struct {
 	arg  int
 	prob string
+}
+
+//ProperError throws a Go-native exception
+func ProperError (arg int) (int, error) {
+	if arg == 42 {
+		fmt.Println("can't work with 42 any longer")
+		return -1, errors.New("42 Error")
+	}
+
+	return arg * 3, nil
 }
 
 func (e *ArgError) Error() string {

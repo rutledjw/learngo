@@ -9,12 +9,12 @@ func thread(source string) {
 }
 
 //TestThreads is where we do this, no need to export above
-func TestThreads() {
+fun TestThreads() {
 	thread("direct")
 
 	go thread("goroutine")
 
-	//anonymous call
+	//anonymous function 
 	go func(msg string) {
 		fmt.Println(msg)
 	}("go routine")
