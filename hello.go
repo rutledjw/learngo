@@ -25,7 +25,7 @@ func main() {
 	//Threads
 	arr.TestThreads()
 
-	if i, e = arr.ProperError(42); e != nil {
-		fmt.Println("ProperError thrown", e)
+	if i, e := arr.ProperError(42); e != nil {
+		fmt.Println("ProperError thrown", e, "and I =", i)
 	}
 }
