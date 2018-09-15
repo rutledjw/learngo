@@ -9,7 +9,7 @@ func thread(source string) {
 }
 
 //TestThreads is where we do this, no need to export above
-fun TestThreads() {
+func TestThreads() {
 	thread("direct")
 
 	go thread("goroutine")
