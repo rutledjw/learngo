@@ -1,10 +1,11 @@
 package main
 
 import (
-	arr "../learngo/lib"
 	"fmt"
 	"math"
 	"math/rand"
+
+	arr "../learngo/lib"
 )
 
 func listRuns() {
