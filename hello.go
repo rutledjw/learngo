@@ -18,14 +18,20 @@ func main() {
 	// Interfaces
 	r := arr.Rect{Name: "Rectangle1", Width: 3, Height: 6.2}
 	c := arr.Circle{Radius: 5.5}
-
 	arr.Measure(r)
 	arr.Measure(c)
 
 	//Threads
 	arr.TestThreads()
-
 	if i, e := arr.ProperError(42); e != nil {
 		fmt.Println("ProperError thrown", e, "and I =", i)
 	}
+
+	//Goroutines
+	routineTest("Direct Call")
+	go routineTest("Go routine")
+	go func(message string) {
+		fmt.Println("Go anon routine" + message)
+	}("anon test")
+
 }

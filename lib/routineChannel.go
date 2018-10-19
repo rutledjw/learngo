@@ -14,11 +14,16 @@ func TestThreads() {
 
 	go thread("goroutine")
 
-	//anonymous function 
+	//anonymous function
 	go func(msg string) {
 		fmt.Println(msg)
 	}("go routine")
 
 	fmt.Scanln() // take input
-	fmt.Println("done...")
+	fmt.Println("Scanln() done...")
+}
+func routineTest(from string) {
+	for i := 0; i < 3; i++ {
+		fmt.Println(from+" : ", i)
+	}
 }
