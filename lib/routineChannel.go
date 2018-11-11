@@ -22,7 +22,7 @@ func TestThreads() {
 	fmt.Scanln() // take input
 	fmt.Println("Scanln() done...")
 }
-func routineTest(from string) {
+func RoutineTest(from string) {
 	for i := 0; i < 3; i++ {
 		fmt.Println(from+" : ", i)
 	}

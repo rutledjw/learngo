@@ -28,8 +28,8 @@ func main() {
 	}
 
 	//Goroutines
-	routineTest("Direct Call")
-	go routineTest("Go routine")
+	arr.RoutineTest("Direct Call")
+	go arr.RoutineTest("Go routine")
 	go func(message string) {
 		fmt.Println("Go anon routine" + message)
 	}("anon test")
