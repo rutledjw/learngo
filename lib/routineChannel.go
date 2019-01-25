@@ -10,6 +10,9 @@ func thread(source string) {
 
 //TestThreads is where we do this, no need to export above
 func TestThreads() {
+
+	var inputString string
+
 	thread("direct")
 
 	go thread("goroutine")
@@ -19,9 +22,11 @@ func TestThreads() {
 		fmt.Println(msg)
 	}("go routine")
 
-	fmt.Scanln() // take input
-	fmt.Println("Scanln() done...")
+	fmt.Scanln(&inputString) // take input
+	fmt.Println("Scanln() done...", inputString)
 }
+
+//RoutineTest is a loop function
 func RoutineTest(from string) {
 	for i := 0; i < 3; i++ {
 		fmt.Println(from+" : ", i)
