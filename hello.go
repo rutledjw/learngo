@@ -1,8 +1,15 @@
+/*
+*  To run (since you've forgotten)
+*  > go build hello.go
+*  > ./hello
+ */
+
 package main
 
 import (
-	arr "../learngo/lib"
 	"fmt"
+
+	arr "../learngo/lib"
 )
 
 func main() {
